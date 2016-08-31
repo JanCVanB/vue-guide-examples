@@ -1,5 +1,5 @@
-# Vue Guide Notes
+# Vue Guide Examples
 
-My notes as I learn Vue 2.0 through its official guide
+Self-contained web app examples from the official Vue.js 2.0 Guide
 
-[Link to the Vue 2.0 Guide](<http://rc.vuejs.org/guide/index.html>)
+[Link to the Vue.js 2.0 Guide](<http://rc.vuejs.org/guide/index.html>)
