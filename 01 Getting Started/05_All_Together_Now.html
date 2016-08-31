@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<div id="app">
+  <input v-model="newTodo" v-on:keyup.enter="addTodo">
+  <ul>
+    <li v-for="(todo, index) in todos">
+      <span>{{ todo.text }}</span>
+      <button v-on:click="removeTodo(index)">X</button>
+    </li>
+  </ul>
+</div>
+<script src="../vue.js"></script>
+<script src="./05_All_Together_Now.js"></script>
