@@ -1,12 +1,27 @@
 <!DOCTYPE html>
+<!-- jvanbrug: I've added text and styles to help see the classes change -->
+<style>
+  div {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 200px;
+  }
+  .active {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .text-danger {
+    color: red;
+  }
+</style>
 <div id="example1">
-  <div v-bind:class="[activeClass, errorClass]"></div>
+  <div v-bind:class="[activeClass, errorClass]">Example 1</div>
 </div>
 <div id="example2">
-  <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+  <div v-bind:class="[isActive ? activeClass : '', errorClass]">Example 2</div>
 </div>
 <div id="example3">
-  <div v-bind:class="[{ active: isActive }, errorClass]"></div>
+  <div v-bind:class="[{ active: isActive }, errorClass]">Example 3</div>
 </div>
 <script src="../../vue.js"></script>
 <script src="./main.js"></script>
