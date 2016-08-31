@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<div id="example1">
+  <div v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+</div>
+<div id="example2">
+  <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+</div>
+<div id="example3">
+  <div v-bind:class="classObject"></div>
+</div>
+<div id="example4">
+  <div v-bind:class="classObject"></div>
+</div>
+<script src="../../vue.js"></script>
+<script src="./main.js"></script>
