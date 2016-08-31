@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<div id="example1">
+  <div v-bind:class="[activeClass, errorClass]"></div>
+</div>
+<div id="example2">
+  <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+</div>
+<div id="example3">
+  <div v-bind:class="[{ active: isActive }, errorClass]"></div>
+</div>
+<script src="../../vue.js"></script>
+<script src="./main.js"></script>
