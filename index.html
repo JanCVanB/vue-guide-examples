@@ -16,148 +16,33 @@
 
 <body>
 
-  <h2>
-    Self-contained web app examples from the official Vue.js 2.0 Guide
-  </h2>
-  <a href="http://rc.vuejs.org/guide/index.html">
-    Link to the Vue.js 2.0 Guide
-  </a>
-  <h3>
-    Examples:
-  </h3>
+  <div id="app">
 
-  <ol>
+    <h2>
+      Self-contained web app examples from the official Vue.js 2.0 Guide
+    </h2>
+    <a href="http://rc.vuejs.org/guide/index.html">
+      Link to the Vue.js 2.0 Guide
+    </a>
+    <h3>
+      Examples:
+    </h3>
 
-    <li>
-      Getting Started
-      <ol>
-        <li>
-          <a href="01_Getting_Started/01_Hello_World/index.html">
-            Hello World
-          </a>
-        </li>
-        <li>
-          <a href="01_Getting_Started/02_Two-way_Binding/index.html">
-            Two-way Binding
-          </a>
-        </li>
-        <li>
-          <a href="01_Getting_Started/03_Render_a_List/index.html">
-            Render a List
-          </a>
-        </li>
-        <li>
-          <a href="01_Getting_Started/04_Handle_User_Input/index.html">
-            Handle User Input
-          </a>
-        </li>
-        <li>
-          <a href="01_Getting_Started/05_All_Together_Now/index.html">
-            All Together Now
-          </a>
-        </li>
-      </ol>
-    </li>
+    <ol>
+      <li v-for="(chapter, chapterIndex) in chapters">
+        {{ chapter.title }}
+        <ol>
+          <li v-for="(section, sectionIndex) in chapter.sections">
+            <a v-bind:href="getPagePath(chapter, chapterIndex, section, sectionIndex)">
+              {{ section.title }}
+            </a>
+          </li>
+        </ol>
+      </li>
+    </ol>
 
-    <li>
-      Overview
-      <ol>
-        <li>
-          <a href="02_Overview/01_Data_Driven_View/index.html">
-            Data Driven View
-          </a>
-        </li>
-        <li>
-          <a href="02_Overview/02_Directive/index.html">
-            Directive
-          </a>
-        </li>
-      </ol>
-    </li>
+  </div>
 
-    <li>
-      Computed Properties and Watchers
-      <ol>
-        <li>
-          <a href="03_Computed_Properties_and_Watchers/01_Basic_Example/index.html">
-            Basic Example
-          </a>
-        </li>
-        <li>
-          <a href="03_Computed_Properties_and_Watchers/02_Repetitive_Watched_Property/index.html">
-            Repetitive Watched Property
-          </a>
-        </li>
-        <li>
-          <a href="03_Computed_Properties_and_Watchers/03_Better_Computed_Property/index.html">
-            Better Computed Property
-          </a>
-        </li>
-        <li>
-          <a href="03_Computed_Properties_and_Watchers/04_Computed_Setter/index.html">
-            Computed Setter
-          </a>
-        </li>
-        <li>
-          <a href="03_Computed_Properties_and_Watchers/05_Watchers/index.html">
-            Watchers
-          </a>
-        </li>
-      </ol>
-    </li>
-
-    <li>
-      Class and Style Bindings
-      <ol>
-        <li>
-          <a href="04_Class_and_Style_Bindings/01_Class_Object_Syntax/index.html">
-            Class Object Syntax
-          </a>
-        </li>
-        <li>
-          <a href="04_Class_and_Style_Bindings/02_Class_Array_Syntax/index.html">
-            Class Array Syntax
-          </a>
-        </li>
-        <li>
-          <a href="04_Class_and_Style_Bindings/03_Style_Object_Syntax/index.html">
-            Style Object Syntax
-          </a>
-        </li>
-        <li>
-          <a href="04_Class_and_Style_Bindings/04_Style_Array_Syntax/index.html">
-            Style Array Syntax
-          </a>
-        </li>
-      </ol>
-    </li>
-
-    <li>
-      Conditional Rendering
-      <ol>
-        <li>
-          <a href="05_Conditional_Rendering/01_v-if/index.html">
-            v-if
-          </a>
-        </li>
-        <li>
-          <a href="05_Conditional_Rendering/02_Template_v-if/index.html">
-            Template v-if
-          </a>
-        </li>
-        <li>
-          <a href="05_Conditional_Rendering/03_v-show/index.html">
-            v-show
-          </a>
-        </li>
-        <li>
-          <a href="05_Conditional_Rendering/04_v-else/index.html">
-            v-else
-          </a>
-        </li>
-      </ol>
-    </li>
-
-  </ol>
-
+  <script src="./vue.js"></script>
+  <script src="./main.js"></script>
 </body>
