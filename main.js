@@ -53,6 +53,20 @@ new Vue({
           { title: 'v-show' },
           { title: 'v-else' }
         ]
+      },
+      {
+        title: 'List Rendering',
+        sections: [
+          { title: 'Simple v-for' },
+          { title: 'Indexed v-for' },
+          { title: 'Template v-for' },
+          { title: 'Mutation Methods' },
+          { title: 'Replacing an Array' },
+          { title: 'Keys' },
+          { title: 'Object v-for' },
+          { title: 'Range v-for' },
+          { title: 'Displaying Filtered/Sorted Results' }
+        ]
       }
     ]
   },
