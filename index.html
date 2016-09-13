@@ -12,34 +12,35 @@
   <meta name="apple-mobile-web-app-title" content="Vue Guide Examples">
   <meta name="application-name" content="Vue Guide Examples">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="vuejs.org.css">
 </head>
 
 <body>
 
-  <div id="app">
+  <div id="app" class="content">
 
-    <h2>
+    <h1>
       Self-contained web app examples from the official Vue.js 2.0 Guide
-    </h2>
+    </h1>
     <a href="http://rc.vuejs.org/guide/index.html">
       Link to the Vue.js 2.0 Guide
     </a>
-    <h3>
+    <h2>
       Examples:
-    </h3>
+    </h2>
 
-    <ol>
+    <ul>
       <li v-for="(chapter, chapterIndex) in chapters">
         {{ chapter.title }}
-        <ol>
+        <ul>
           <li v-for="(section, sectionIndex) in chapter.sections">
             <a v-bind:href="getPagePath(chapter, chapterIndex, section, sectionIndex)">
               {{ section.title }}
             </a>
           </li>
-        </ol>
+        </ul>
       </li>
-    </ol>
+    </ul>
 
   </div>
 
