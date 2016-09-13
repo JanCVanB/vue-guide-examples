@@ -67,6 +67,14 @@ new Vue({
           { title: 'Range v-for' },
           { title: 'Displaying Filtered/Sorted Results' }
         ]
+      },
+      {
+        title: 'Methods and Event Handling',
+        sections: [
+          { title: 'Listening to Events' },
+          { title: 'Method Event Handlers' },
+          { title: 'Methods in Inline Handlers' }
+        ]
       }
     ]
   },
