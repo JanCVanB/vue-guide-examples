@@ -75,6 +75,13 @@ new Vue({
           { title: 'Method Event Handlers' },
           { title: 'Methods in Inline Handlers' }
         ]
+      },
+      {
+        title: 'Form Input Bindings',
+        sections: [
+          { title: 'Basic Usage' },
+          { title: 'Value Bindings' }
+        ]
       }
     ]
   },

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <div id="example-text" class="demo">
+      <input v-model="message" placeholder="edit me">
+      <p>Message is: {{ message }}</p>
+    </div>
+
+    <div id="example-multiline-text" class="demo">
+      <span>Multiline message is:</span>
+      <p>{{ message }}</p>
+      <br>
+      <textarea v-model="message" placeholder="edit me"></textarea>
+    </div>
+
+    <div id="example-checkbox" class="demo">
+      <input type="checkbox" id="checkbox" v-model="checked">
+      <label for="checkbox">{{ checked }}</label>
+    </div>
+
+    <div id="example-checkboxes" class="demo">
+      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+      <label for="jack">Jack</label>
+      <input type="checkbox" id="john" value="John" v-model="checkedNames">
+      <label for="john">John</label>
+      <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+      <label for="mike">Mike</label>
+      <br>
+      <span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+    <div id="example-radio" class="demo">
+      <input type="radio" id="one" value="One" v-model="picked">
+      <label for="one">One</label>
+      <br>
+      <input type="radio" id="two" value="Two" v-model="picked">
+      <label for="two">Two</label>
+      <br>
+      <span>Picked: {{ picked }}</span>
+    </div>
+
+    <div id="example-select" class="demo">
+      <select v-model="selected">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+      <span>Selected: {{ selected }}</span>
+    </div>
+
+    <div id="example-multiselect" class="demo">
+      <select v-model="selected" multiple style="width: 50px">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+      <br>
+      <span>Selected: {{ selected }}</span>
+    </div>
+
+    <div id="example-dynamic-options" class="demo">
+      <select v-model="selected">
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+      <span>Selected: {{ selected }}</span>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>

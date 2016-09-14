@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <div id="example-checkbox" class="demo">
+      <input id="checkbox"
+        type="checkbox"
+        v-model="toggle"
+        v-bind:true-value="a"
+        v-bind:false-value="b">
+      <label for="checkbox">{{ toggle }}</label>
+    </div>
+
+    <div id="example-radio" class="demo">
+      <input id="one" type="radio" v-model="pick" v-bind:value="a">
+      <label for="one">One</label>
+      <br>
+      <input id="two" type="radio" v-model="pick" v-bind:value="b">
+      <label for="two">Two</label>
+      <br>
+      <span>Pick: {{ pick }}</span>
+    </div>
+
+    <div id="example-select" class="demo">
+      <select v-model="selected">
+        <option v-bind:value="{ number: 123 }">123</option>
+        <option v-bind:value="{ number: 456 }">456</option>
+        <option v-bind:value="{ number: 789 }">789</option>
+      </select>
+      <div>
+        Selected type: {{ typeof selected }}
+      </div>
+      <div>
+        Selected number: {{ typeof selected === 'object' ? selected.number : 'N/A' }}
+      </div>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>
