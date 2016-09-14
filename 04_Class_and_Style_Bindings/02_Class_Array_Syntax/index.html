@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<!-- jvanbrug: I've added text and styles to help see the classes change -->
-<style>
-  div {
-    margin-bottom: 10px;
-    text-align: center;
-    width: 200px;
-  }
-  .active {
-    border: 1px solid black;
-    border-radius: 5px;
-  }
-  .text-danger {
-    color: red;
-  }
-</style>
-<div id="example1">
-  <div v-bind:class="[activeClass, errorClass]">Example 1</div>
-</div>
-<div id="example2">
-  <div v-bind:class="[isActive ? activeClass : '', errorClass]">Example 2</div>
-</div>
-<div id="example3">
-  <div v-bind:class="[{ active: isActive }, errorClass]">Example 3</div>
-</div>
-<script src="../../vue.js"></script>
-<script src="./main.js"></script>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <!-- jvanbrug: I've added text and styles to help see the classes change -->
+    <style>
+      div {
+        margin-bottom: 10px;
+        text-align: center;
+        width: 200px;
+      }
+      .active {
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .text-danger {
+        color: red;
+      }
+    </style>
+    <div id="example1" class="demo">
+      <div v-bind:class="[activeClass, errorClass]">Example 1</div>
+    </div>
+    <div id="example2" class="demo">
+      <div v-bind:class="[isActive ? activeClass : '', errorClass]">Example 2</div>
+    </div>
+    <div id="example3" class="demo">
+      <div v-bind:class="[{ active: isActive }, errorClass]">Example 3</div>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>

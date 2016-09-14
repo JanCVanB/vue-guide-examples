@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<!-- jvanbrug: I've added text to help see the styles change -->
-<div id="example1">
-  <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">Example 1</div>
-</div>
-<div id="example2">
-  <div v-bind:style="styleObject">Example 2</div>
-</div>
-<script src="../../vue.js"></script>
-<script src="./main.js"></script>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <!-- jvanbrug: I've added text to help see the styles change -->
+    <div id="example1" class="demo">
+      <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">Example 1</div>
+    </div>
+    <div id="example2" class="demo">
+      <div v-bind:style="styleObject">Example 2</div>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>

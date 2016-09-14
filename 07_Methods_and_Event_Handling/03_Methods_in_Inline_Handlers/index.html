@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<div id="example-3">
-  <button v-on:click="say('hi')">Say hi</button>
-  <button v-on:click="say('what')">Say what</button>
-  <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
-</div>
-<script src="../../vue.js"></script>
-<script src="./main.js"></script>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <div id="example-3" class="demo" class="demo">
+      <button v-on:click="say('hi')">Say hi</button>
+      <button v-on:click="say('what')">Say what</button>
+      <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>
