@@ -1,5 +1,5 @@
 var vm = new Vue({
-  el: '#demo',
+  el: '#example',
   data: {
     firstName: 'Foo',
     lastName: 'Bar'
