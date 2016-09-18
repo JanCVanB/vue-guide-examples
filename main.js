@@ -94,7 +94,11 @@ new Vue({
           { title: 'camelCase vs. kebab-case' },
           { title: 'Dynamic Props' },
           { title: 'Literal vs. Dynamic' },
-          { title: 'Prop Validation' }
+          { title: 'Prop Validation' },
+          { title: 'Using v-on with Custom Events' },
+          { title: 'Using v-on with Native Events' },
+          { title: 'Form Input Components using Custom Events' },
+          { title: 'Non Parent-Child Communication' }
         ]
       }
     ]
