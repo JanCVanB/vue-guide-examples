@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <h1>Components</h1>
+    <h2>Compilation Scope</h2>
+
+    <div id="example-1" class="demo">
+      <h4>Bad child text binding</h4>
+      <parent-component></parent-component>
+    </div>
+
+    <div id="example-2" class="demo">
+      <h4>Bad child property binding</h4>
+      <parent-component></parent-component>
+    </div>
+
+    <div id="example-3" class="demo">
+      <h4>Good child property binding</h4>
+      <parent-component></parent-component>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>

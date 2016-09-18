@@ -98,7 +98,10 @@ new Vue({
           { title: 'Using v-on with Custom Events' },
           { title: 'Using v-on with Native Events' },
           { title: 'Form Input Components using Custom Events' },
-          { title: 'Non Parent-Child Communication' }
+          { title: 'Non Parent-Child Communication' },
+          { title: 'Compilation Scope' },
+          { title: 'Single Slot' },
+          { title: 'Named Slots' }
         ]
       }
     ]
