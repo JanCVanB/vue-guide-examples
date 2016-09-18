@@ -101,7 +101,8 @@ new Vue({
           { title: 'Non Parent-Child Communication' },
           { title: 'Compilation Scope' },
           { title: 'Single Slot' },
-          { title: 'Named Slots' }
+          { title: 'Named Slots' },
+          { title: 'Dynamic Components' }
         ]
       }
     ]
