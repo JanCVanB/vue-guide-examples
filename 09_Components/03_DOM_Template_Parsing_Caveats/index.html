@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <h1>Components</h1>
+    <h2>Template Parsing Caveats</h2>
+
+    <div id="example-bad" class="demo">
+      <h4>&lt;my-row&gt;&lt;/my-row&gt;</h4>
+      <table>
+        <my-row></my-row>
+      </table>
+    </div>
+
+    <div id="example-good" class="demo">
+      <h4>&lt;tr is="my-row"&gt;&lt;/tr&gt;</h4>
+      <table>
+        <tr is="my-row"></tr>
+      </table>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>

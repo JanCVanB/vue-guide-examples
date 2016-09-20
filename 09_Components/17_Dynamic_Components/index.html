@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <h1>Components</h1>
+    <h2>Dynamic Components</h2>
+
+    <div id="example-1" class="demo">
+      <h4>Bind to child components</h4>
+      <component v-bind:is="currentView">
+        <!-- component changes when vm1.currentView changes! -->
+      </component>
+    </div>
+
+    <div id="example-2" class="demo">
+      <h4>Bind to non-child components</h4>
+      <component v-bind:is="currentView">
+        <!-- component changes when vm2.currentView changes! -->
+      </component>
+    </div>
+
+    <div id="example-3" class="demo">
+      <h4>Keep the switched-out components in memory with &lt;keep-alive&gt;</h4>
+      <keep-alive>
+        <component :is="currentView">
+          <!-- component changes when vm3.currentView changes! -->
+          <!-- inactive components will be cached! -->
+        </component>
+      </keep-alive>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>

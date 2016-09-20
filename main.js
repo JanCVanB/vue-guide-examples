@@ -82,6 +82,28 @@ new Vue({
           { title: 'Basic Usage' },
           { title: 'Value Bindings' }
         ]
+      },
+      {
+        title: 'Components',
+        sections: [
+          { title: 'Global Registration' },
+          { title: 'Local Registration' },
+          { title: 'DOM Template Parsing Caveats' },
+          { title: '`data` Must Be a Function' },
+          { title: 'Passing Data with Props' },
+          { title: 'camelCase vs. kebab-case' },
+          { title: 'Dynamic Props' },
+          { title: 'Literal vs. Dynamic' },
+          { title: 'Prop Validation' },
+          { title: 'Using v-on with Custom Events' },
+          { title: 'Using v-on with Native Events' },
+          { title: 'Form Input Components using Custom Events' },
+          { title: 'Non Parent-Child Communication' },
+          { title: 'Compilation Scope' },
+          { title: 'Single Slot' },
+          { title: 'Named Slots' },
+          { title: 'Dynamic Components' }
+        ]
       }
     ]
   },
@@ -89,8 +111,12 @@ new Vue({
     getPagePath: function(chapter, chapterIndex, section, sectionIndex) {
       var chapterNumber = getSingleZeroPaddedString(chapterIndex + 1)
       var sectionNumber = getSingleZeroPaddedString(sectionIndex + 1)
-      var chapterDirectory = chapter.title.replace(/[ \/]/g, '_')
-      var sectionDirectory = section.title.replace(/[ \/]/g, '_')
+      var chapterDirectory = (
+        chapter.title.replace(/[`\.]/g, '').replace(/[ \/]/g, '_')
+      )
+      var sectionDirectory = (
+        section.title.replace(/[`\.]/g, '').replace(/[ \/]/g, '_')
+      )
       return (
         chapterNumber + '_' + chapterDirectory + '/' +
         sectionNumber + '_' + sectionDirectory + '/index.html'

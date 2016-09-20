@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Vue Guide Examples
+  </title>
+  <link rel="icon" type="image/png" href="../../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="../../vuejs.org.css">
+</head>
+<body>
+  <div class="content">
+
+    <h1>Components</h1>
+    <h2>Using v-on with Native Events</h2>
+
+    <div id="counter-event-example" class="demo">
+      <p>{{ total }}</p>
+      <button-counter v-on:increment="incrementTotal"></button-counter>
+      <button-counter v-on:increment="incrementTotal"></button-counter>
+    </div>
+
+  </div>
+  <script src="../../vue.js"></script>
+  <script src="./main.js"></script>
+</body>
