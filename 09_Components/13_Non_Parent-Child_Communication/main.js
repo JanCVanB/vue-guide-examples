@@ -11,16 +11,18 @@ Vue.component('component-a', {
 
 Vue.component('component-b', {
   template: '<span>A has{{ aWasClicked ? "" : " not"}} been clicked</span>',
-  data: {
-    aWasClicked: false
+  data: function() {
+    return {
+      aWasClicked: false
+    }
+  },
+  created: function() {
+    component = this
+    bus.$on('id-selected', id => {
+      component.aWasClicked = true
+    })
   }
 })
-
-// TODO:
-// // in component B's created hook
-// bus.$on('id-selected', function (id) {
-//   // ...
-// })
 
 new Vue({
   el: '#example'
